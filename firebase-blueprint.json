@@ -1,0 +1,75 @@
+{
+  "entities": {
+    "marketing_workspaces": {
+      "title": "Marketing Workspaces",
+      "description": "Shared workspace storage for marketing simulator (Meta Pixel, Meta Ads, Google Ads, GA4, GTM, Mailchimp)",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique workspace ID (e.g. default_workspace)"
+        },
+        "pixels": {
+          "type": "array",
+          "description": "Meta Pixels configured across GTM and Events Manager",
+          "items": {
+            "type": "object"
+          }
+        },
+        "metaCampaigns": {
+          "type": "array",
+          "description": "Meta Ads campaigns launched by students",
+          "items": {
+            "type": "object"
+          }
+        },
+        "googleAdsCampaigns": {
+          "type": "array",
+          "description": "Google Ads campaigns launched by students",
+          "items": {
+            "type": "object"
+          }
+        },
+        "trafficSources": {
+          "type": "array",
+          "description": "GA4 traffic sources connected to campaigns",
+          "items": {
+            "type": "object"
+          }
+        },
+        "gtmTags": {
+          "type": "array",
+          "description": "GTM tags configured",
+          "items": {
+            "type": "object"
+          }
+        },
+        "gtmTriggers": {
+          "type": "array",
+          "description": "GTM triggers configured",
+          "items": {
+            "type": "object"
+          }
+        },
+        "newsletters": {
+          "type": "array",
+          "description": "Mailchimp newsletters created",
+          "items": {
+            "type": "object"
+          }
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of last update"
+        }
+      },
+      "required": ["id", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/marketing_workspaces/{workspaceId}": {
+      "schema": "marketing_workspaces",
+      "description": "Document holding student marketing state and cross-tool synchronizations"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "MarketSim - Portail de Formation Marketing",
+  "description": "Plateforme interactive de simulation marketing incluant Google Tag Manager, Meta Ads & Pixel Events Manager, GA4 Entonnoir & Key Events, Google Ads, Mailchimp Newsletter Builder et Looker Studio Dashboard Reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
